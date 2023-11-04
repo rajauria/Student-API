@@ -34,4 +34,13 @@ public class StudentRepository {
         String studentID = obj.getId();
         studentDB.put (studentID,obj);
     }
+
+
+    public void updateAllDetailsbyID(String id, Student obj) {
+        studentDB.put (id,obj);
+    }
+
+    public void deleteStudentByID (String id){
+        studentDB.remove(id);
+    }
 }

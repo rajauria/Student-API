@@ -42,4 +42,13 @@ public class StudentService {
           studentRepo.addStudent(obj);
      }
 
+     public void updateAllDetailsbyID (String id, Student obj){
+          studentRepo.updateAllDetailsbyID (id,obj);
+     }
+
+     public void deleteStudentByID (String id){
+          studentRepo.deleteStudentByID(id);
+     }
+
+
 }

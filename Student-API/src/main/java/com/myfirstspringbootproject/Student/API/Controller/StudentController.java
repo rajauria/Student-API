@@ -34,5 +34,16 @@ public class StudentController {
         return studentService.calculateBMI(studentID);
     }
 
+    @PutMapping ("/api/update/{studentID}/alldetails")
+    public String updateAllDetails (@PathVariable String studentID , @RequestBody Student obj){
+        studentService.updateAllDetailsbyID(studentID,obj);
+        return "All Details of student got updated with student id as " + studentID;
+    }
 
+    @DeleteMapping ("/api/delete/student/{studentID}")
+        public String deleteStudentByID (@PathVariable String studentID) {
+        studentService.deleteStudentByID(studentID);
+        return studentID + " got deleted from the database";
+    }
 }
+
